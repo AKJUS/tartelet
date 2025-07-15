@@ -6,6 +6,9 @@ struct SettingsGitHubActionsRunnerConfiguration<
     SettingsStoreType: SettingsStore
 >: GitHubActionsRunnerConfiguration {
     let settingsStore: SettingsStoreType
+    var runnerDisableDefaultLabels: Bool {
+        settingsStore.gitHubRunnerDisableDefaultLabels
+    }
     var runnerDisableUpdates: Bool {
         settingsStore.gitHubRunnerDisableUpdates
     }

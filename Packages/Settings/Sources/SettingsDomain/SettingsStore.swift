@@ -12,5 +12,6 @@ public protocol SettingsStore: AnyObject {
     var gitHubRunnerLabels: String { get set }
     var gitHubRunnerGroup: String { get set }
     var gitHubRunnerName: String { get set }
+    var gitHubRunnerDisableDefaultLabels: Bool { get set }
     var githubRunnerScope: GitHubRunnerScope { get set }
 }

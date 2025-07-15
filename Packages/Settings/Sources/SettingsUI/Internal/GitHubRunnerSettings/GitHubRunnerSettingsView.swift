@@ -15,7 +15,11 @@ struct GitHubRunnerSettingsView<SettingsStoreType: SettingsStore & Observable>: 
                     prompt: Text(githubRunnerNamePrompt)
                 )
                 .disabled(!isSettingsEnabled)
-
+                Toggle(isOn: $settingsStore.gitHubRunnerDisableDefaultLabels) {
+                    Text(L10n.Settings.GithubRunner.disableDefaultLabels)
+                }
+                .disabled(!isSettingsEnabled)
+                
                 TextField(
                     L10n.Settings.GithubRunner.labels,
                     text: $settingsStore.gitHubRunnerLabels,

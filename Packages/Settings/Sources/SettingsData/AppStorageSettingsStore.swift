@@ -15,6 +15,7 @@ public final class AppStorageSettingsStore: SettingsStore {
         static let gitHubRunnerLabels = "gitHubRunnerLabels"
         static let gitHubRunnerGroup = "gitHubRunnerGroup"
         static let gitHubRunnerName = "gitHubRunnerName"
+        static let gitHubRunnerDisableDefaultLabels = "gitHubRunnerDisableDefaultLabels"
         static let githubRunnerScope = "githubRunnerScope"
     }
 
@@ -134,6 +135,17 @@ public final class AppStorageSettingsStore: SettingsStore {
         set {
             withMutation(keyPath: \.gitHubRunnerName) {
                 userDefaults.setValue(newValue, forKey: AppStorageKey.gitHubRunnerName)
+            }
+        }
+    }
+    public var gitHubRunnerDisableDefaultLabels: Bool {
+        get {
+            access(keyPath: \.gitHubRunnerDisableDefaultLabels)
+            return userDefaults.bool(forKey: AppStorageKey.gitHubRunnerDisableDefaultLabels)
+        }
+        set {
+            withMutation(keyPath: \.gitHubRunnerDisableDefaultLabels) {
+                userDefaults.setValue(newValue, forKey: AppStorageKey.gitHubRunnerDisableDefaultLabels)
             }
         }
     }

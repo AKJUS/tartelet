@@ -101,6 +101,7 @@ internal enum L10n {
         /// acme
         internal static let prompt = L10n.tr("Localizable", "settings.github_runner.group.prompt", fallback: "acme")
       }
+      internal static let disableDefaultLabels = L10n.tr("Localizable", "settings.github_runner.disableDefaultLabels", fallback: "Disable default labels")
       internal enum Labels {
         /// Comma-separated list of labels.
         internal static let footer = L10n.tr("Localizable", "settings.github_runner.labels.footer", fallback: "Comma-separated list of labels.")

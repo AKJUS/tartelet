@@ -108,7 +108,8 @@ cd \\$ACTIONS_RUNNER_DIRECTORY
   --runnergroup "\(configuration.runnerGroup)"\\\\
   --work "_work"\\\\
   --token "\(runnerToken.rawValue)"\\\\
-  \(configuration.runnerDisableUpdates ? "--disableupdate" : "")
+  \(configuration.runnerDisableUpdates ? "--disableupdate" : "")\\\\
+  \(configuration.runnerDisableDefaultLabels ? "--no-default-labels" : "")
 ./run.sh
 EOF
 """)
